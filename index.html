@@ -150,6 +150,38 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Favorite Songs Styling */
+        .song-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .song-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 12px;
+            background-color: #f8fafc;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .song-cover {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .song-text {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
     </style>
 </head>
 <body>
