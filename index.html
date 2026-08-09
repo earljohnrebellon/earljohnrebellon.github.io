@@ -14,44 +14,60 @@
             box-sizing: border-box;
         }
 
-        /* Centered card container for PC and Mobile */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f1f5f9; /* Solid clean background */
+            margin: 0;
+            padding: 40px 20px;
+            color: #2d3748;
+            min-height: 100vh;
+        }
+
+        /* Wide card layout for PC */
         .card {
             background: #ffffff;
             width: 100%;
-            max-width: 650px;
-            margin: 0 auto; /* Centers container on screen */
-            padding: 35px 25px;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
         h1 {
             font-size: 2.2rem;
             font-weight: 800;
             color: #1e293b;
-            margin: 0 0 8px 0;
+            margin: 0 0 6px 0;
             text-align: center;
             letter-spacing: -0.5px;
         }
 
         .subtitle {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #64748b;
             text-align: center;
-            margin: 0 0 25px 0;
+            margin: 0 0 30px 0;
             line-height: 1.5;
+        }
+
+        /* Desktop Grid Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 30px;
+            align-items: start;
         }
 
         .profile-img {
             width: 100%;
-            max-width: 100%;
             border-radius: 16px;
             display: block;
-            margin: 0 auto 25px auto;
             box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            object-fit: cover;
         }
 
-        /* Native interactive dropdown accordions */
+        /* Dropdown styling */
         details {
             background-color: #f8fafc;
             border: 1px solid #e2e8f0;
@@ -124,6 +140,16 @@
         strong {
             color: #0f172a;
         }
+
+        /* Mobile layout adjustment */
+        @media (max-width: 768px) {
+            .card {
+                padding: 25px 20px;
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -132,43 +158,48 @@
         <h1>Earl John Rebellon</h1>
         <p class="subtitle">Hi! Welcome to my personal biography page. Here is a little bit about me:</p>
         
-        <img src="me.jpg" alt="Earl John Rebellon" class="profile-img">
+        <div class="content-grid">
+            <!-- Left Side: Image -->
+            <img src="me.jpg" alt="Earl John Rebellon" class="profile-img">
 
-        <details open>
-            <summary>About Me</summary>
-            <div class="dropdown-content">
-                <ul>
-                    <li><strong>Current School:</strong> Grade 11 STEM student at PHINMA St. Jude College Dasmariñas Cavite Inc.</li>
-                    <li><strong>Junior High:</strong> Graduated from Salawag National High School</li>
-                    <li><strong>Elementary:</strong> Graduated from Don Salvador Benedicto Memorial School</li>
-                    <li><strong>Birthday:</strong> April 11, 2010</li>
-                    <li><strong>Background:</strong> Raised in Bacolod, Negros Occidental; currently living in Dasmariñas, Cavite.</li>
-                </ul>
-            </div>
-        </details>
+            <!-- Right Side: Accordions -->
+            <div class="accordion-group">
+                <details open>
+                    <summary>About Me</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><strong>Current School:</strong> Grade 11 STEM student at PHINMA St. Jude College Dasmariñas Cavite Inc.</li>
+                            <li><strong>Junior High:</strong> Graduated from Salawag National High School</li>
+                            <li><strong>Elementary:</strong> Graduated from Don Salvador Benedicto Memorial School</li>
+                            <li><strong>Birthday:</strong> April 11, 2010</li>
+                            <li><strong>Background:</strong> Raised in Bacolod, Negros Occidental; currently living in Dasmariñas, Cavite.</li>
+                        </ul>
+                    </div>
+                </details>
 
-        <details>
-            <summary>Hobbies & Interests</summary>
-            <div class="dropdown-content">
-                <ul>
-                    <li>Solving Rubik's cubes</li>
-                    <li>Playing the keyboard</li>
-                    <li>Gaming</li>
-                </ul>
-            </div>
-        </details>
+                <details>
+                    <summary>Hobbies & Interests</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>Solving Rubik's cubes</li>
+                            <li>Playing the keyboard</li>
+                            <li>Gaming</li>
+                        </ul>
+                    </div>
+                </details>
 
-        <details>
-            <summary>Personal Connections</summary>
-            <div class="dropdown-content">
-                <ul>
-                    <li><strong>Relationship Status:</strong> In a relationship with Ashley Doll E. Figueroa</li>
-                    <li><strong>Mother:</strong> Leah Panen</li>
-                    <li><strong>Father:</strong> Ernie Rebellon</li>
-                    <li><strong>Siblings:</strong> 1 sister</li>
-                </ul>
+                <details>
+                    <summary>Personal Connections</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><strong>Mother:</strong> Leah Panen</li>
+                            <li><strong>Father:</strong> Ernie Rebellon</li>
+                            <li><strong>Siblings:</strong> 1 sister</li>
+                        </ul>
+                    </div>
+                </details>
             </div>
-        </details>
+        </div>
     </div>
 
 </body>
