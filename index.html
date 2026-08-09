@@ -4,262 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who is Earl John Rebellon? | Official Bio</title>
-    <!-- Importing modern 'Poppins' font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         * {
             box-sizing: border-box;
         }
 
-
-        /* Card background for content */
-        .card-container {
+        /* Centered card container for PC and Mobile */
+        .card {
             background: #ffffff;
             width: 100%;
-            max-width: 600px;
+            max-width: 650px;
+            margin: 0 auto; /* Centers container on screen */
             padding: 35px 25px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
         }
 
-        /* Large Title Font */
         h1 {
             font-size: 2.2rem;
             font-weight: 800;
             color: #1e293b;
-            margin-top: 0;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
+            margin: 0 0 8px 0;
             text-align: center;
+            letter-spacing: -0.5px;
         }
 
         .subtitle {
             font-size: 0.95rem;
             color: #64748b;
             text-align: center;
-            margin-bottom: 25px;
+            margin: 0 0 25px 0;
+            line-height: 1.5;
         }
 
-        /* Featured Profile Image */
-        .main-img {
+        .profile-img {
             width: 100%;
             max-width: 100%;
             border-radius: 16px;
             display: block;
-            margin: 0 auto 30px auto;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            margin: 0 auto 25px auto;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
         }
 
-        /* Google-Style Dropdown Accordions */
-        .accordion {
-            background-color: #f8fafc;
-            color: #1e293b;
-            cursor: pointer;
-            padding: 16px 20px;
-            width: 100%;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            text-align: left;
-            outline: none;
-            font-size: 1.05rem;
-            font-weight: 600;
-            font-family: 'Poppins', sans-serif;
-            transition: all 0.3s ease;
-            margin-top: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .accordion:hover {
-            background-color: #f1f5f9;
-            border-color: #cbd5e1;
-        }
-
-        .accordion.active {
-            background-color: #ebf8ff;
-            border-color: #3498db;
-            color: #0284c7;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-
-        /* Plus/Minus Indicator */
-        .accordion::after {
-            content: '\002B';
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: #64748b;
-        }
-
-        .accordion.active::after {
-            content: "\2212";
-            color: #0284c7;
-        }
-
-        /* Dropdown Content Panel */
-        .panel {
-            padding: 0 20px;
-            background-color: #ffffff;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            border: 1px solid #e2e8f0;
-            border-top: none;
-            border-bottom-left-radius: 12px;
-            border-bottom-right-radius: 12px;
-            margin-bottom: 12px;
-        }
-
-        .panel ul {
-            padding-left: 20px;
-            margin: 15px 0;
-        }
-
-        .panel li {
-            margin-bottom: 10px;
-            line-height: 1.5;
-            font-size: 0.95rem;
-        }
-
-        .panel strong {
-            color: #0f172a;
-        }
-    </style>
-</head>
-<body>
-
-<div class="card-container">
-    <h1>Earl John Rebellon</h1>
-    <p class="subtitle">Hi! Welcome to my personal biography page. Here is a little bit about me:</p>
-
-    <!-- Make sure your uploaded image filename matches 'me.jpg' or update it below -->
-    <img src="me.jpg" alt="Earl John Rebellon" class="main-img">
-
-    <!-- Accordion 1 -->
-    <button class="accordion">About Me</button>
-    <div class="panel">
-        <ul>
-            <li><strong>Current School:</strong> Grade 11 STEM student at PHINMA St. Jude College Dasmariñas Cavite Inc.</li>
-            <li><strong>Junior High:</strong> Graduated from Salawag National High School</li>
-            <li><strong>Elementary:</strong> Graduated from Don Salvador Benedicto Memorial School</li>
-            <li><strong>Birthday:</strong> April 11, 2010</li>
-            <li><strong>Background:</strong> Raised in Bacolod, Negros Occidental; currently living in Dasmariñas, Cavite.</li>
-        </ul>
-    </div>
-
-    <!-- Accordion 2 -->
-    <button class="accordion">Hobbies & Interests</button>
-    <div class="panel">
-        <ul>
-            <li>🧩 Solving Rubik's cubes (Speedcubing)</li>
-            <li>🎹 Playing the keyboard</li>
-            <li>🎮 Gaming</li>
-        </ul>
-    </div>
-
-    <!-- Accordion 3 -->
-    <button class="accordion">Personal Connections</button>
-    <div class="panel">
-        <ul>
-            <li><strong>Relationship Status:</strong> In a relationship with Ashley Doll E. Figueroa</li>
-            <li><strong>Mother:</strong> Leah Panen</li>
-            <li><strong>Father:</strong> Ernie Rebellon</li>
-            <li><strong>Siblings:</strong> 1 sister</li>
-        </ul>
-    </div>
-</div>
-
-<!-- JavaScript for Google-Style Dropdown Click Animation -->
-<script>
-    const acc = document.getElementsByClassName("accordion");
-    
-    for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            const panel = this.nextElementSibling;
-            
-Your site is off to a great start, but adding structured container cards, bolder modern typography, and interactive dropdowns will take it to a professional level.
-
-Right now, the text blends directly into the page gradient, which makes it feel flat and harder to read. Wrapping everything inside a clean white card (with soft shadows and rounded corners), importing modern Google typography, and using HTML `<details>` tags for accordion dropdowns will make the interface look crisp and polished.
-
-Here is a complete, redesigned version of your HTML file:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who is Earl John Rebellon?</title>
-    <!-- Importing modern typography from Google Fonts -->
-    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-    <link href="[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap)" rel="stylesheet">
-    
-    <style>
-        /* Base page styling */
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: linear-gradient(180deg, #eef2f3 0%, #8e9eab 100%);
-            background-attachment: fixed;
-            margin: 0;
-            padding: 40px 20px;
-            color: #2d3748;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Main card container holding the content */
-        .card {
-            background: #ffffff;
-            width: 100%;
-            max-width: 600px;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Hero / Title styling */
-        .title {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #1a202c;
-            margin: 0 0 8px 0;
-            letter-spacing: -0.5px;
-        }
-
-        .subtitle {
-            font-size: 1rem;
-            color: #718096;
-            margin: 0 0 24px 0;
-            line-height: 1.5;
-        }
-
-        /* Main image formatting */
-        .profile-img {
-            width: 100%;
-            max-height: 380px;
-            object-fit: cover;
-            border-radius: 14px;
-            margin-bottom: 28px;
-            display: block;
-        }
-
-        /* Google-style accordion dropdowns */
+        /* Native interactive dropdown accordions */
         details {
             background-color: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
             margin-bottom: 12px;
             overflow: hidden;
-            transition: all 0.2s ease;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
         }
 
         details[open] {
-            border-color: #cbd5e1;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            background-color: #ffffff;
+            border-color: #3498db;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
         }
 
         summary {
@@ -275,38 +80,41 @@ Here is a complete, redesigned version of your HTML file:
             user-select: none;
         }
 
-        /* Custom dropdown indicator icon */
         summary::-webkit-details-marker {
             display: none;
         }
 
         summary::after {
             content: "＋";
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: #64748b;
             font-weight: 600;
-            transition: transform 0.2s ease;
         }
 
         details[open] summary::after {
             content: "－";
+            color: #3498db;
         }
 
-        /* Content inside dropdowns */
+        details[open] summary {
+            color: #3498db;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
         .dropdown-content {
-            padding: 0 20px 20px 20px;
-            border-top: 1px solid #f1f5f9;
+            padding: 15px 20px 20px 20px;
         }
 
         ul {
-            margin: 12px 0 0 0;
+            margin: 0;
             padding-left: 20px;
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             line-height: 1.6;
             color: #334155;
+            font-size: 0.95rem;
         }
 
         li:last-child {
@@ -321,13 +129,11 @@ Here is a complete, redesigned version of your HTML file:
 <body>
 
     <div class="card">
-        <h1 class="title">Earl John Rebellon</h1>
+        <h1>Earl John Rebellon</h1>
         <p class="subtitle">Hi! Welcome to my personal biography page. Here is a little bit about me:</p>
         
-        <!-- Make sure 'me.jpg' matches your exact image file name in GitHub -->
         <img src="me.jpg" alt="Earl John Rebellon" class="profile-img">
 
-        <!-- Accordion Section 1 -->
         <details open>
             <summary>About Me</summary>
             <div class="dropdown-content">
@@ -341,7 +147,6 @@ Here is a complete, redesigned version of your HTML file:
             </div>
         </details>
 
-        <!-- Accordion Section 2 -->
         <details>
             <summary>Hobbies & Interests</summary>
             <div class="dropdown-content">
@@ -353,7 +158,6 @@ Here is a complete, redesigned version of your HTML file:
             </div>
         </details>
 
-        <!-- Accordion Section 3 -->
         <details>
             <summary>Personal Connections</summary>
             <div class="dropdown-content">
