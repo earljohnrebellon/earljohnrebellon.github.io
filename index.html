@@ -199,6 +199,70 @@
             font-weight: 600;
             color: #1e293b;
         }
+
+        /* Hobbies & Video Styling */
+        .hobby-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 5px;
+        }
+
+        .hobby-item {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .hobby-header strong {
+            display: block;
+            font-size: 1rem;
+            color: #1e293b;
+        }
+
+        .hobby-header p {
+            margin: 4px 0 12px 0;
+            font-size: 0.88rem;
+            color: #64748b;
+        }
+
+        /* Responsive 16:9 Widescreen Container (Tekken Gameplay) */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Responsive Vertical Short Container (Rubik's Cube Solve) */
+        .short-container {
+            position: relative;
+            width: 100%;
+            max-width: 280px;
+            aspect-ratio: 9 / 16;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .short-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
     </style>
 </head>
 <body>
@@ -226,16 +290,58 @@
                     </div>
                 </details>
 
-                <details>
-                    <summary>Hobbies & Interests</summary>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li>Solving Rubik's cubes</li>
-                            <li>Playing the keyboard</li>
-                            <li>Gaming</li>
-                        </ul>
+              <!-- Accordion 2: Hobbies & Interests -->
+        <details>
+            <summary>Hobbies & Interests</summary>
+            <div class="dropdown-content">
+                <div class="hobby-list">
+                    
+                    <!-- Hobby 1: Rubik's Cubes -->
+                    <div class="hobby-item">
+                        <div class="hobby-header">
+                            <strong>🧩 Solving Rubik's Cubes</strong>
+                            <p>Rubik's cube solve (sub 30):</p>
+                        </div>
+                        <div class="short-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/mSxPBgTGlEI" 
+                                title="rubiks cube solve (sub 30)" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
                     </div>
-                </details>
+
+                    <!-- Hobby 2: Playing the Keyboard -->
+                    <div class="hobby-item">
+                        <div class="hobby-header">
+                            <strong>🎹 Playing the Keyboard</strong>
+                        </div>
+                    </div>
+
+                    <!-- Hobby 3: Gaming -->
+                    <div class="hobby-item">
+                        <div class="hobby-header">
+                            <strong>🎮 Gaming</strong>
+                            <p>Tekken gameplay (Alisa vs Kuma):</p>
+                        </div>
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/lIk7SPtmLzk" 
+                                title="tekken gameplay (alisa vs kuma)" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </details>
 
                 <!-- Favorite Songs -->
                 <details>
